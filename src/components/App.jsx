@@ -75,6 +75,7 @@ function App() {
       <Searchbar onSubmit={handleSearch} disabled={searchButtonDisabled} />
       <ImageGallery pictures={pictures} showPicture={handlePicture} />
       {loading && loadingSpiner}
+      {!pictures.length && search && <p>...Sorry, no pictures </p>}
       {error && <p>{error}</p>}
       {pictures.length > 0 && finish === false && (
         <button
